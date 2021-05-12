@@ -26,8 +26,8 @@ public class AdjustDatabase {
 	private static PreparedStatement preparedStatement = null;
 	
 	//Values are hidden, if using, put in appropriate username and password
-	private static final String username = "admin";
-	private static final String password = "alexWa0720";
+	private static final String username = "*****";
+	private static final String password = "********";
 	//Sql domain, in this case is the AWS, could be localhost.
 	private static final String sqlDomain = "contact-database.crumhr25o7ma.us-east-1.rds.amazonaws.com";
 	
