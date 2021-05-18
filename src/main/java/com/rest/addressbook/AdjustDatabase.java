@@ -29,7 +29,9 @@ public class AdjustDatabase {
 	private static final String username = "*****";
 	private static final String password = "********";
 	//Sql domain, in this case is the AWS, could be localhost.
-	private static final String sqlDomain = "contact-database.crumhr25o7ma.us-east-1.rds.amazonaws.com";
+	//private static final String sqlDomain = "contact-database.crumhr25o7ma.us-east-1.rds.amazonaws.com:3066";
+	private static final String sqlDomain = "contact-database-do-user-9250134-0.b.db.ondigitalocean.com:25060";
+	
 	
 	//Adds contact
 	//Returns string, ok if no error, otherwise returns error message. Used for testing but didn't see a reason to change it in
@@ -169,7 +171,7 @@ public class AdjustDatabase {
 	//All methods must init the DB when starting up to establish a connection.
 	private static void initializeDB() throws ClassNotFoundException, SQLException {
 		Class.forName("com.mysql.cj.jdbc.Driver");
-		connect = DriverManager.getConnection("jdbc:mysql://" + sqlDomain + ":3306/contactdb", username, password);
+		connect = DriverManager.getConnection("jdbc:mysql://" + sqlDomain + "/contactdb", username, password);
 		statement = connect.createStatement();
 	}
 	
